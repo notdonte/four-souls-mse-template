@@ -6,7 +6,7 @@ position hint: 444
 installer group: four-souls/game
 
 #By notRat, assets edited by AdipemDragon.
-#Assets graciously provided by the Isaac Discord users: @DaveReiby, This Guy#2671, and peas#9418.
+#Assets graciously provided by the Isaac Discord
 #Based on the Four Suits template by Green Meep
 #Additional help from GenevensiS, who's tutorial helped me decypher a lot of this.
 #special thanks to scribbles in the four souls card repository discord for pointing me in the right direction
@@ -105,13 +105,13 @@ auto replace:
 auto replace:
 	match: a:
 	replace: <sym>a</sym>
-
+auto replace:
 	match: h:
 	replace: <sym>h</sym>
-	
+auto replace:
 	match: d:
 	replace: <sym>d</sym>
-	
+auto replace:
 	match: b:
 	replace: <sym>b</sym>
 auto replace:
