@@ -17,6 +17,13 @@ set field:
 	name: Set Information
 set field:
 	type: text
+	name: title
+set field:
+	type: text
+	name: description
+	multi line: true
+set field:
+	type: text
 	name: credit
 	default: "card by"
 set field:
@@ -28,19 +35,6 @@ set field:
 	name: artist
 	default: "art by"
 	
-card field:
-	type: text
-	name: artist
-	default: set.artist
-	show statistics: false
-	editable: true
-card field:
-	type: text
-	name: credit
-	default: set.credit
-	show statistics: false
-	editable: true
-
 card field:
 	type: text
 	name: name
@@ -92,6 +86,18 @@ card field:
 	name: charadice
 	multi line: false
 	description: Character starting DICE value.
+card field:
+	type: text
+	name: artist
+	default: set.artist
+	show statistics: false
+	editable: true
+card field:
+	type: text
+	name: credit
+	default: set.credit
+	show statistics: false
+	editable: true
 
 auto replace:
 	match: t:
