@@ -118,6 +118,18 @@ auto replace:
 	match: p:
 	replace: <sym>p</sym>
 auto replace:
+	match: l1:
+	replace: <sym>l1</sym>
+auto replace:
+	match: l2:
+	replace: <sym>l2</sym>
+auto replace:
+	match: l3:
+	replace: <sym>l3</sym>
+auto replace:
+	match: l4:
+	replace: <sym>l4</sym>
+auto replace:
 	match:1:
 	replace: <sym>r1</sym>
 auto replace:
