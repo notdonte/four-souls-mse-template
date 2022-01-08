@@ -115,6 +115,9 @@ auto replace:
 	match: b:
 	replace: <sym>b</sym>
 auto replace:
+	match: p:
+	replace: <sym>p</sym>
+auto replace:
 	match:1:
 	replace: <sym>r1</sym>
 auto replace:
