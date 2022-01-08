@@ -1,0 +1,73 @@
+mse version: 2.0.0
+installer group: four-souls/symbol-font
+
+vertical space: -64
+symbol:
+	code: t
+	image: Tag_Tap.png
+	image font size: 16
+	
+symbol:
+	code: d
+	image: Icon_Dice.png
+	image font size: 12
+	
+symbol:
+	code: h
+	image: Icon_Heart.png
+	image font size: 12
+	
+symbol:
+	code: a
+	image: Icon_Sword.png
+	image font size: 12
+	
+symbol:
+	code: p
+	image: Tag_Paid.png
+	image font size: 12
+symbol:
+	code: b
+	image: bar.png
+	image font size: 11
+
+symbol:
+	code: r1
+	image: ding1.png
+	image font size: 48
+symbol:
+	code: r2
+	image: ding2.png
+	image font size: 48
+symbol:
+	code: r3
+	image: ding3.png
+	image font size: 48
+symbol:
+	code: r4
+	image: ding4.png
+	image font size: 48
+symbol:
+	code: r5
+	image: ding5.png
+	image font size: 48
+symbol:
+	code: r6
+	image: ding6.png
+	image font size: 48
+
+insert symbol menu:
+	item: t
+	item: d
+	item: h
+	item: p
+	item: a
+	item: b
+	item:
+		name: Roll Numbers
+		item: r1
+		item: r2
+		item: r3
+		item: r4
+		item: r5
+		item: r6

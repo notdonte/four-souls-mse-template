@@ -1,0 +1,137 @@
+mse version: 2.0.0
+short name: four souls
+full name: Binding of Isaac Four Souls Template
+icon: icon.png
+position hint: 444
+installer group: four-souls/game
+
+#By notRat, assets edited by AdipemDragon.
+#Assets graciously provided by the Isaac Discord
+#Based on the Four Suits template by Green Meep
+#Additional help from GenevensiS, who's tutorial helped me decypher a lot of this.
+#special thanks to scribbles in the four souls card repository discord for pointing me in the right direction
+#special thanks to kino for pointing me towards tutorials
+
+set field:
+	type: info
+	name: Set Information
+set field:
+	type: text
+	name: credit
+	default: "card by"
+set field:
+	type: text
+	name: description
+	multi line: true
+set field:
+	type: text
+	name: artist
+	default: "art by"
+	
+card field:
+	type: text
+	name: artist
+	default: set.artist
+	show statistics: false
+	editable: true
+card field:
+	type: text
+	name: credit
+	default: set.credit
+	show statistics: false
+	editable: true
+
+card field:
+	type: text
+	name: name
+	description: The name of the card.
+
+card field:
+	type: image
+	name: image
+	description: The card's image.
+
+
+card field:
+	type: text
+	name: rulestext
+	multi line: true
+	description: Rules text.
+
+card field:
+	type: text
+	name: flavortext
+	multi line: true
+	description: Flavor text.
+	
+card field:
+	type: choice
+	editable: true
+	name: souls
+	description: The number of souls this card has.
+	choice: nosoul
+	choice: 1soul
+	choice: 2soul
+	choice: 3soul
+	initial: nosoul
+	
+card field:
+	type: text
+	name: charahp
+	multi line: false
+	description: Character starting HP value.
+	
+card field:
+	type: text
+	name: charaatk
+	multi line: false
+	description: Character starting ATK value.
+
+card field:
+	type: text
+	name: charadice
+	multi line: false
+	description: Character starting DICE value.
+
+auto replace:
+	match: t:
+	replace: <sym>t</sym>
+	
+	match: p:
+	replace: <sym>p</sym>
+	
+	match: -color
+	replace: <color:rgb(102,102,102)>colored text</color>
+auto replace:
+	match: a:
+	replace: <sym>a</sym>
+
+	match: h:
+	replace: <sym>h</sym>
+	
+	match: d:
+	replace: <sym>d</sym>
+	
+	match: b:
+	replace: <sym>b</sym>
+auto replace:
+	match:1:
+	replace: <sym>r1</sym>
+auto replace:
+	match:2:
+	replace: <sym>r2</sym>
+auto replace:
+	match:3:
+	replace: <sym>r3</sym>
+auto replace:
+	match:4:
+	replace: <sym>r4</sym>
+auto replace:
+	match:5:
+	replace: <sym>r5</sym>
+auto replace:
+	match:6:
+	replace: <sym>r6</sym>
+auto replace:
+	match: (C)
+	replace: ©

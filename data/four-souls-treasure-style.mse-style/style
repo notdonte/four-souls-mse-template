@@ -1,0 +1,262 @@
+mse version: 2.0.0
+game: four-souls
+short name: Item Card
+full name: 4 Souls Item Cards
+icon: icon.png
+position hint: 1
+installer group: four-souls/style
+
+depends on:
+	package: four-souls.mse-game 0.0.0
+	package: four-souls-symbols.mse-symbol-font
+depends on: four-souls.mse-game 0.0.0
+
+card width: 962
+card height: 1312
+card dpi: 120
+extra card field:
+	type: choice
+	name: flavorbar
+	choice: bar
+	editable: false
+	save value: false
+	show statistics: false
+	
+extra card field:
+	type: choice
+	editable: false
+	save value: false
+	name: cardtype
+	description: I broke something and need this to fix it.
+	choice: item
+	initial: item
+
+styling field:
+	type: choice
+	name: bordermode
+	description: What flavor of transparency do you want?
+	initial: Border_Passive
+	choice: Border_Passive
+	choice: Border_Active
+	choice: Border_Haunted
+	choice: Req_Passive
+	choice: Req_Active
+	choice: Req_Haunted
+	choice: Border_Eternal
+	choice: Border_Eternal_Active
+	choice: Req_Eternal
+	choice: Req_Eternal_Active
+styling field:
+	type: text
+	name: flavor size
+	description: Flavor text is used for itemname on characters.
+styling field:
+	type: boolean
+	name: inverted info
+	description: Do you want inverted info text?
+	initial: false
+
+	
+extra card style:
+	############################# Background stuff
+	cardtype:
+		left:	0
+		top:	0
+		width:	962
+		height:	1312
+		z index: 0
+		render style: image
+		popup style: in place
+		image: {styling.bordermode + "_Treasure.png"}
+
+card style:
+
+	name:
+		top: 102
+		left: 120
+		height: 64
+		width: 729
+		z index: 1
+		alignment: middle center shrink-overflow
+		font:
+			name: Font_souls V2 _ Title Regular
+			size: 60
+			color: black
+
+	image:
+		top: 0
+		left: 0
+		height: 1312
+		width: 962
+		z index: 2
+		mask: {styling.bordermode + "_Artmask.png"}
+		default: image_bg.png
+
+	rulestext:
+		top: 840
+		left: 126
+		height: {if styling.flavor_size != "" then (372 - styling.flavor_size) else 372 }
+		width: 720
+		z index: 2
+		alignment: middle center shrink-overflow
+		font:
+			name: Font_souls V2 _ Body Regular
+			size: 52
+			scale down to: 32
+			color: rgb(0,0,0)
+		symbol font:
+			name: four-souls-symbols
+			size: 11
+	flavortext:
+		top: {if styling.flavor_size != "" then (1212 - styling.flavor_size + 10) else 1212 }
+		left: 126
+		height: {if styling.flavor_size != "" then (styling.flavor_size - 15) else 50 }
+		width: 720
+		z index: 2
+		alignment: middle center shrink-overflow
+		font:
+			name: Font_souls V2 _ Body Regular
+			size: 48
+			scale down to: 24
+			color: rgb(102,102,102)
+		symbol font:
+			name: four-souls-symbols
+			size: 1024
+	souls:
+		top: {if card.souls == "1soul" then 1075 else 1045}
+		left: {if card.souls == "1soul" then 699 else 662}
+		height: {if card.souls == "1soul" then 168 else 233}
+		width: {if card.souls == "1soul" then 199 else 286}
+		z index: 4
+		render style: image
+		popup style: in place
+		image: {if card.souls !="nosoul" then card.souls + ".png" else "image_bg.png"}
+	credit:
+		top: 1226
+		left: 88
+		height: 52
+		width: 400
+		z index: 4
+		alignment: middle left shrink-overflow
+		font:
+			name: Font_souls V2 _ Body Regular
+			size: 24
+			scale down to: 8
+			color: {if styling.inverted_info then "white" else "black"}
+		symbol font:
+			name: four-souls-symbols
+			size: 1024
+	artist:
+		top: 1256
+		left: 488
+		height: 52
+		width: 400
+		z index: 4
+		alignment: middle right shrink-overflow
+		font:
+			name: Font_souls V2 _ Body Regular
+			size: 24
+			scale down to: 8
+			color: {if styling.inverted_info then "white" else "black"}
+		symbol font:
+			name: four-souls-symbols
+			size: 1024
+
+extra card style:
+	flavorbar:
+		top: {if styling.flavor_size != "" then (1212 - styling.flavor_size) else 1212 }
+		left: 0
+		height: 15
+		width: 962
+		z index: 2
+		visible: {styling.flavor_size != ""}
+		render style: image
+		popup style: in place
+		image: bar.png
+
+styling field:
+	type: text
+	name: custom bar 1
+	description: Moves a second textbox that is of identical size to the regular one, but lowered enough so that you can place bars psuedo manually between lines.
+styling field:
+	type: text
+	name: custom bar 2
+	description: Moves a second textbox that is of identical size to the regular one, but lowered enough so that you can place bars psuedo manually between lines.
+styling field:
+	type: text
+	name: custom bar 3
+	description: Moves a second textbox that is of identical size to the regular one, but lowered enough so that you can place bars psuedo manually between lines.
+styling field:
+	type: text
+	name: custom bar 4
+	description: Moves a second textbox that is of identical size to the regular one, but lowered enough so that you can place bars psuedo manually between lines.
+extra card field:
+	type: choice
+	name: extrabar1
+	choice: bar
+	editable: false
+	save value: false
+	show statistics: false
+extra card field:
+	type: choice
+	name: extrabar2
+	choice: bar
+	editable: false
+	save value: false
+	show statistics: false
+extra card field:
+	type: choice
+	name: extrabar3
+	choice: bar
+	editable: false
+	save value: false
+	show statistics: false
+extra card field:
+	type: choice
+	name: extrabar4
+	choice: bar
+	editable: false
+	save value: false
+	show statistics: false
+
+extra card style:
+	extrabar1:
+		top: {if styling.custom_bar_1 != "" then styling.custom_bar_1 - -840 else 0}
+		left: 0
+		height: 15
+		width: 962
+		z index: 1
+		visible: {styling.custom_bar_1 != ""}
+		render style: image
+		popup style: in place
+		image: bar.png
+	extrabar2:
+		top: {if styling.custom_bar_2 != "" then styling.custom_bar_2 - -840 else 0}
+		left: 0
+		height: 15
+		width: 962
+		z index: 1
+		visible: {styling.custom_bar_2 != ""}
+		render style: image
+		popup style: in place
+		image: bar.png
+	extrabar3:
+		top: {if styling.custom_bar_3 != "" then styling.custom_bar_3 - -840 else 0}
+		left: 0
+		height: 15
+		width: 962
+		z index: 1
+		visible: {styling.custom_bar_3 != ""}
+		render style: image
+		popup style: in place
+		image: bar.png
+	extrabar4:
+		top: {if styling.custom_bar_4 != "" then styling.custom_bar_4 - -840 else 0}
+		left: 0
+		height: 15
+		width: 962
+		z index: 1
+		visible: {styling.custom_bar_4 != ""}
+		render style: image
+		popup style: in place
+		image: bar.png
