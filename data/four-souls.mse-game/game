@@ -102,10 +102,10 @@ card field:
 auto replace:
 	match: t:
 	replace: <sym>t</sym>
-	
+auto replace:
 	match: p:
 	replace: <sym>p</sym>
-	
+auto replace:
 	match: -color
 	replace: <color:rgb(102,102,102)>colored text</color>
 auto replace:
