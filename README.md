@@ -4,7 +4,7 @@ This is a collection of [Magic Set Editor](https://github.com/twanvl/MagicSetEdi
 
 # Installation
 
-1. Download this and [Magic Set Editor](https://magicseteditor.boards.net/page/downloads).
+1. Download [this](https://github.com/notdonte/four-souls-mse-template/archive/refs/heads/main.zip) and [Magic Set Editor](https://magicseteditor.boards.net/page/downloads).
 2. Extract this repository.
 3. Place the data folder into your Magic Set Editor install location.
 4. Install all fonts in the Fonts folder.
