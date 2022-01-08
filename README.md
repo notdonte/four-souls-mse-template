@@ -1,4 +1,4 @@
-Template images provided by The Binding Of Isaac Four Souls [discord](https://discord.gg/MSUnun9)
+Template images provided by The Binding Of Isaac Four Souls [Discord](https://discord.gg/MSUnun9)
 
 This is a collection of [Magic Set Editor](https://github.com/twanvl/MagicSetEditor2) templates for The Binding of Isaac Four Souls.
 
