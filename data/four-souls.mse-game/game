@@ -14,7 +14,7 @@ installer group: four-souls/game
 
 set field:
 	type: info
-	name: Set Information
+	name: Set Information 
 set field:
 	type: text
 	name: title
@@ -39,7 +39,9 @@ card field:
 	type: text
 	name: name
 	description: The name of the card.
-
+	card list name: Name
+	card list visible: true
+	card list column: 0
 card field:
 	type: image
 	name: image
@@ -51,13 +53,17 @@ card field:
 	name: rulestext
 	multi line: true
 	description: Rules text.
-
+	card list name: Rules Text
+	card list visible: true
+	card list column: 1
 card field:
 	type: text
 	name: flavortext
 	multi line: true
 	description: Flavor text.
-	
+	card list name: Flavor Text
+	card list visible: true
+	card list column: 2
 card field:
 	type: choice
 	editable: true
@@ -68,37 +74,51 @@ card field:
 	choice: 2soul
 	choice: 3soul
 	initial: nosoul
-	
+	card list name: Soul Amount
+	card list visible: true
+	card list column: 7
 card field:
 	type: text
 	name: charahp
 	multi line: false
 	description: Character starting HP value.
-	
+	card list name: Hearts
+	card list visible: true
+	card list column: 3
 card field:
 	type: text
 	name: charaatk
 	multi line: false
 	description: Character starting ATK value.
-
+	card list name: Attack
+	card list visible: true
+	card list column: 4
 card field:
 	type: text
 	name: charadice
 	multi line: false
 	description: Character starting DICE value.
+	card list name: Dice
+	card list visible: true
+	card list column: 5
 card field:
 	type: text
 	name: artist
 	default: set.artist
 	show statistics: false
 	editable: true
+	card list name: Artist Credit
+	card list visible: true
+	card list column: 8
 card field:
 	type: text
 	name: credit
 	default: set.credit
 	show statistics: false
 	editable: true
-
+	card list name: Creator Credit
+	card list visible: true
+	card list column: 9
 auto replace:
 	match: t:
 	replace: <sym>t</sym>
