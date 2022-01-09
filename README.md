@@ -23,3 +23,5 @@ Inverted info inverts the crediting text boxes, for when art is dark/bright to e
 Custom Bars 1-4 are there to add rules text bars. Input only numbers here.
 
 The icon replacement setup is designed around easily accessing important icons. You can also add icons by using the menu Format>Insert Symbol. All icon replacements work on [Icon]: (Example: tap is T:)
+
+If the card size is too big to function, you can edit zoom level in Edit>Preferences>Display>Zoom.
