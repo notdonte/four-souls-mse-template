@@ -46,6 +46,8 @@ styling field:
 	choice: Border_Eternal_Active
 	choice: Req_Eternal
 	choice: Req_Eternal_Active
+	choice: Cus_Planetarium_Peas
+	choice: Cus_PlanetariumActive_Peas
 styling field:
 	type: text
 	name: flavor size
